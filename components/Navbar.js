@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import styles from '../styles/navbar.module.css'
 import { useState } from 'react'
+import Membership from '../pages/membership'
 
 
 const Navbar = () => {
@@ -31,21 +32,11 @@ const Navbar = () => {
                 </div>
             </nav>
 
-
-
-
-
-
-
             {member ? (
-                <div className={styles.memberModal}>
-                    <div className={styles.closeSection}>
-                        <button onClick={closeMem} className={styles.xbutton}><Image src="/whiteClose.svg" width={48} height={48} alt="close" /></button>
-                    </div>
-                    <div className={styles.contentSection}>
-                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deserunt dicta, labore esse aspernatur reprehenderit h voluptatem, ullam quis officia maiores fugiat minus odit cumque dolorem non ut suscipit laboriosam. Delectus?</h2>
-                    </div>
+                <div>
+                    <Membership closeMem={closeMem} />
                 </div>
+
             ) : null
             }
 
