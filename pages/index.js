@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <div className="blackbg">
         <div className={styles.container}>
           <div className={styles.overlay}>
+            <Navbar />
             <div className={styles.subcontainer}>
               <p className={styles.gobig}>Go Big <br /> Or Go Home</p>
             </div>

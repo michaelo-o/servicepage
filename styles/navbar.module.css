@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content: space-between;
+    color: white;
+    background-color: transparent;
+    padding: 36px 169px 36px 141px;
+}
+
+.leftnav,
+.rightnav {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.rightnav {
+    font-weight: 400 !important;
+}
+
+.rightnav span {
+    margin-left: 40px;
+    padding: 7px 16px 6px 16px;
+}
+
+.rightnav span:hover {
+    background-color: rgba(0, 0, 0, 0.16);
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.leftnav span:hover,
+.rightnav span:hover {
+    cursor: pointer;
+}
