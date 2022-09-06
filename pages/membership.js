@@ -16,7 +16,7 @@ const Membership = (props) => {
                 </div>
                 <div className={styles.contentSection}>
                     <div className={styles.ieasy}>
-                        <h4>It's so easy</h4>
+                        <h4>It&apos;s so easy</h4>
                         <p>A subscription is $9 per month.</p>
                     </div>
                     <div className={styles.sidemenu}>
