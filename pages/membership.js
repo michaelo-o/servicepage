@@ -33,12 +33,12 @@ const Membership = (props) => {
                         <div>
                             <h3>Subscribe for $9 per month</h3>
                             <p>This is the most popular option across our members. Join now, and cancel at any time!</p>
-                            <button>Subscribe Now</button>
+                            <button className={styles.cardButton}>Subscribe Now</button>
                         </div>
                         <div>
                             <h3>Pay $99 Once</h3>
                             <p>This is the most popular option across our members. Join now, and cancel at any time!</p>
-                            <button>Pay Once</button>
+                            <button className={styles.cardButton}>Pay Once</button>
                         </div>
                     </div>
                 </div>

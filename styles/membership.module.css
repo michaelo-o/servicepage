@@ -100,6 +100,25 @@
     line-height: 24px;
 }
 
+.cardButton {
+    padding: 8px 12px 7px 15px;
+    color: rgba(63, 0, 126, 1);
+    background-color: rgba(234, 212, 255, 1);
+    border-radius: 6px;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.cardButton:hover {
+    cursor: pointer;
+    background-color: rgba(127, 0, 255, 1);
+    color: white;
+    border-radius: 6px;
+}
+
 .sidemenu {
     padding: 207px 173px 0 0;
     float: right;
