@@ -4,6 +4,8 @@ import Head from 'next/head'
 import styles from '../styles/navbar.module.css'
 import { useState } from 'react'
 import Membership from '../pages/membership'
+import { motion, AnimatePresence } from 'framer-motion'
+
 
 
 const Navbar = () => {
@@ -28,17 +30,23 @@ const Navbar = () => {
                     <span>Home</span>
                     <span>Services</span>
                     <span>FAQ</span>
-                    <span onClick={openMem}>Become a member</span>
+                    <motion.span onClick={openMem}>Become a member</motion.span>
                 </div>
             </nav>
 
-            {member ? (
-                <div>
-                    <Membership closeMem={closeMem} />
-                </div>
+            <AnimatePresence
+                initial={false}
+                exitBeforeEnter={true}
+                onExitComplete={() => null}
+            >
 
-            ) : null
-            }
+                {member ? (
+                    <Membership closeMem={closeMem} />
+
+                ) : null
+                }
+
+            </AnimatePresence>
 
         </>
     );

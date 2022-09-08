@@ -3,14 +3,43 @@ import Image from 'next/image'
 import Head from 'next/head'
 import styles from '../styles/membership.module.css'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const Membership = (props) => {
 
     const closeMem = props.closeMem
 
+    const slideIn = {
+        hidden: {
+            x: "100vw",
+            opacity: 0,
+        },
+        visible: {
+            x: "0",
+            opacity: 1,
+            transition: {
+                duration: 0.1,
+                type: "linear",
+                damping: 25,
+                stiffness: 500,
+            },
+        },
+        exit: {
+            x: "100vw",
+            opacity: 0,
+        },
+    };
+
     return (
         <>
-            <div className={styles.memberModal}>
+            <motion.div
+                className={styles.memberModal}
+                onClick={(e) => e.stopPropagation()}
+                variants={slideIn}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+            >
                 <div className={styles.closeSection}>
                     <button onClick={closeMem} className={styles.xbutton}><Image src="/whiteClose.svg" width={48} height={48} alt="close" /></button>
                 </div>
@@ -42,7 +71,7 @@ const Membership = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
         </>
     );
