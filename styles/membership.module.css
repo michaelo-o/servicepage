@@ -144,3 +144,6 @@
 .socialmedia {
     padding-right: 24.25px;
 }
+.socialmedia:hover{
+    cursor: pointer;
+}
